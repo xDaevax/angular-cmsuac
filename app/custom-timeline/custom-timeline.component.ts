@@ -17,6 +17,18 @@ export class CustomTimelineComponent implements OnInit {
         label: 'Hello',
         type: 'add',
         subject: 'Test'
+      },
+      {
+        date: new Date(),
+        label: 'Test',
+        type: 'Edit',
+        subject: 'MCID'
+      },
+      {
+        date: new Date(),
+        label: 'Test 2',
+        type: 'Delete',
+        subject: 'Equipment Class'
       }
     ];
   }

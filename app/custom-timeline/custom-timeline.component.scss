@@ -13,27 +13,37 @@
 .timeline {
   max-width: 1200px;
   margin: 0 auto;
+  position: absolute;
   min-height: 50vh;
-  height: 100%;
+  height: inherit;
   display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
-  background-color: rgba(120, 120, 120, .9);
+  width: 2px;
+  background-color: rgba(120, 120, 120, 0.9);
   top: 0;
   bottom: 0;
+  margin: 1.4rem;
+  height: inherit;
 }
 
 /* Container around content */
 .container-item {
-  padding: .2rem;
-  position: absolute;
+  padding: 0.2rem;
+  position: relative;
   background-color: inherit;
-  width: 50%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: middle;
+  width: 100%;
 }
 
 /* The circles on the timeline */
@@ -42,21 +52,38 @@
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: black;
-  top: 45%;
+  background-color: rgba(120, 120, 120, 0.9);
+  top: 40%;
+  left: 0;
+  margin-left: 1.08rem;
   border-radius: 50%;
   z-index: 1;
+  transition: all .35s 0s cubic-bezier(.33, .66, .4, .84);
 }
 
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: 0;
+.container-item:hover::before {
+  background-color: rgba(200, 200,200, 1);
+  transition: all .35s 0s cubic-bezier(.33, .66, .4, .84);
 }
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: .2rem;
+  margin-left: 2rem;
+  width: 100%;
   background-color: white;
   position: relative;
   border-radius: 6px;
+  display: grid;
+  grid-template-columns: 20% 15% auto auto;
+  align-self: center;
+  align-items: center;
+  vertical-align: middle;
+  align-content: center;
+  transition: all .35s 0s cubic-bezier(.33, .66, .4, .84);
+}
+
+.content:hover {
+  background-color: rgba(225, 225, 225, .6);
+  transition: all .35s 0s cubic-bezier(.33, .66, .4, .84);
 }
