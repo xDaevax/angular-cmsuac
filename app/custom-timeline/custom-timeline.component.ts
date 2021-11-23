@@ -3,7 +3,7 @@ export type TimelineItem = {date: Date, label: string, type: string, subject: st
 @Component({
   selector: 'app-custom-timeline',
   templateUrl: './custom-timeline.component.html',
-  styleUrls: ['./custom-timeline.component.css']
+  styleUrls: ['./custom-timeline.component.scss']
 })
 export class CustomTimelineComponent implements OnInit {
 
