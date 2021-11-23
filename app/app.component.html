@@ -1,0 +1,26 @@
+<div style="width: 100%; display: grid;">
+  <kendo-stepper [steps]="steps" stepType="full" orientation="vertical">
+    <ng-template kendoStepperLabelTemplate let-step>
+      <div class="step-wrapper">
+        <div class="humanized-date">{{ step.date | date }}</div>
+        <div class="subject">{{ step.label }}</div>
+        <div class="activity-type">{{ step.type }}ed</div>
+      </div>
+    </ng-template>
+  </kendo-stepper>
+</div>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2017</h2>
+      <p>Lorem ipsum..</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2016</h2>
+      <p>Lorem ipsum..</p>
+    </div>
+  </div>
+</div>
